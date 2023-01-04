@@ -4,7 +4,7 @@
             <div class="card-body">
                 <i class="fa fa-check-square text-info"></i>
                 <h5 class="card-title">Confirmed</h5>
-                <p>500, 0000</p>
+                <p>{{ summerData?.TotalConfirmed | number  }}</p>
             </div>
         </div>
     </div>
@@ -14,7 +14,7 @@
             <div class="card-body">
                 <i class="fa fa-times text-danger"></i>
                 <h5 class="card-title">Deaths</h5>
-                <p>100, 0000</p>
+                <p>{{ summerData?.TotalDeaths | number  }}</p>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <div class="card-body">
                 <i class="fa fa-heart text-success"></i>
                 <h5 class="card-title">Recovered</h5>
-                <p>500, 0000</p>
+                <p>{{ summerData?.TotalRecovered | number }}</p>
             </div>
         </div>
     </div>

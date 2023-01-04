@@ -11,4 +11,8 @@ export class DataService {
   getSummaryData(){
     return this.http.get('https://api.covid19api.com/summary');
   }
+
+  getCountryDataByDate(country: string, date: string){
+    return this.http.get(`https://api.covid19api.com/total/country/${country}/status/confirmed?${date}`);
+  }
 }

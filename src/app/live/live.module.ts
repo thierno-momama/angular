@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LivePageComponent } from './components/live-page/live-page.component';
 import { LiveRoutingModule } from './country-routing.module';
+import { HighchartsChartModule } from 'highcharts-angular';
 
 
 
@@ -11,7 +12,8 @@ import { LiveRoutingModule } from './country-routing.module';
   ],
   imports: [
     CommonModule,
-    LiveRoutingModule
+    LiveRoutingModule,
+    HighchartsChartModule
   ]
 })
 export class LiveModule { }
