@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="form-area">
+        <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" placeholder="First Name" class="form-control" name="fullName" formControlName="fullName" />
+
+                <div class="alert alert-danger" *ngIf="FullName.touched && FullName.invalid">
+                    <div *ngIf="FullName.errors?.['required']">FullName required...</div>
+                    <div *ngIf="FullName.errors?.['minlength']">FullName most be 5 characters...</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstname">Email</label>
+                <input type="email" placeholder="Email" class="form-control" name="email" formControlName="email"/>
+
+                <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
+                    <div *ngIf="Email.errors?.['required']">Email Required...</div>
+                    <div *ngIf="Email.errors?.['email']">Email is invalid....</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea  placeholder="Address" cols="30" rows="10" class="form-control" name="address" formControlName="address"></textarea>
+                <div class="alert alert-danger" *ngIf="Address.touched && Address.invalid">
+                    <div *ngIf="Address.errors?.['required']">Adress is required...</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button>
+        </form>
+    </div>
+  </div>
